@@ -12,3 +12,11 @@ Css Framework: [TailwindCss](https://https://tailwindcss.com/)
 ### Back-end
 REST API: [PHP](https://www.php.net/) \
 Database: [MySQL](https://www.mysql.com/)
+
+<br/>
+<br/>
+
+----
+
+### Note:
+Change db.example.php & config.example.js to db.php & config.js respectively, and fill them with required values.
