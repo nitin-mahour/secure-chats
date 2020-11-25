@@ -1,0 +1,14 @@
+.git/
+.vscode/
+website/node_modules/
+website/build/
+apply.txt
+
+
+# large css file
+website/src/styles/tailwind.dev.css
+website/src/styles/tailwind.css
+
+# config files
+api/db.php
+website/src/config.js
