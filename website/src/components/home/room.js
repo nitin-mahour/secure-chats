@@ -92,11 +92,11 @@ export default class Room extends Component {
     render() {
         return (
             <>
-                <div className="border-2 rounded-2xl border-gray-700 m-2" style={{ height: "80vh" }}>
+                <div className="flex-1 border-2 rounded-2xl border-gray-700 mx-2" style={{ maxHeight: "80vh" }}>
 
-                    <p className="text-2xl text-gray-500 text-center w-full p-2" style={{ height: "5vh" }}>{(this.props.roomid)} </p>
+                    <p className="text-2xl text-gray-500 text-center w-full py-1">{(this.props.roomid)} </p>
 
-                    <div className="overflow-y-scroll p-2" style={{ height: "74vh" }} id="chat-list">
+                    <div className="overflow-y-scroll p-2" style={{ maxHeight: "70vh" }} id="chat-list">
                         {
                             this.state.loaded && this.state.chat.map(item => {
 
@@ -131,9 +131,9 @@ export default class Room extends Component {
 
                 </div>
 
-                <form className="w-full pl-4 pr-2" onSubmit={this.sendMsg}>
+                <form className="w-full pl-4 pr-2 my-2" onSubmit={this.sendMsg}>
                     <div className="flex mx-4">
-                        <input type="text" name="mssg" className="flex-1 outline-none appearance-none bg-transparent border-b-2 border-gray-600 py-1 px-2 text-gray-200 placholder-gray-600 focus:border-gray-400" placeholder="Type message" autoComplete="off" autoFocus />
+                        <input type="text" name="mssg" className="flex-1 outline-none appearance-none bg-transparent border-b-2 border-gray-500 placeholder-gray-500 py-1 px-2 text-gray-400 focus:placeholder-gray-700 focus:border-gray-700" placeholder="Type message" autoComplete="off" autoFocus />
                         <button type="submit" className="flex-0 inline ml-2 text-gray-900 outline-none focus:outline-none font-medium bg-gray-700 p-2 rounded-full">SEND</button>
                     </div>
                 </form>

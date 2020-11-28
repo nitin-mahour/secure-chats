@@ -53,7 +53,13 @@ export default class SignIn extends Component {
                     })
                 }
             })
-            .catch(err => console.log(err))
+            .catch(err => {
+                this.setState({
+                    error: 'Network Error!',
+                    loading: false
+                })
+                console.log(err)
+            })
     }
 
     render() {

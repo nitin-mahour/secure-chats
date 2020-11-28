@@ -10,7 +10,7 @@ function App() {
 	const [auth, setAuth] = useState(Cookies.get('authorised'))
 
 	return (
-		<div className='bg-gray-900 font-sans h-screen flex flex-col place-content-center'>
+		<div className='bg-gray-900 font-sans h-screen w-screen flex flex-col place-content-center'>
 			<Router>
 				{
 					!auth ? (
