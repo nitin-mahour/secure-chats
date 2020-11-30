@@ -36,22 +36,23 @@ export default function Home({ setAuth }) {
                     <svg className="w-8 inline ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
 
                 </div>
-                
-                {
-                    // side popup menu
-                    popup ? (
-                        <div className="fixed relative h-screen cursor-pointer" onClick={() => setPopup(!popup)}>
 
-                            <div className="absolute top-0 right-0 bg-gray-600 rounded-2xl py-8 px-16 mt-12 mr-4">
-                                <button className="text-gray-900" onClick={() => logout()}>LOGOUT</button>
-                            </div>
-
-                        </div>
-                    ) : null
-                }
 
             </div>
 
+            {
+                // side popup menu
+                popup ? (
+                    <div className="fixed h-screen w-screen" onClick={() => setPopup(!popup)}>
+
+                        <div className="container mx-auto relative" >
+                            <div className="absolute top-0 right-0 bg-gray-600 shadow-xl rounded-2xl py-4 px-8 mt-12 mr-4">
+                                <button className="text-gray-900 text-lg py-4 px-8" onClick={() => logout()}>LOGOUT</button>
+                            </div>
+                        </div>
+                    </div>
+                ) : null
+            }
 
             <div className="flex-1 flex flex-col mx-auto container">
                 {
